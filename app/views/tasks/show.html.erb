@@ -1,9 +1,13 @@
+<div class="container">
 <h1><%= @task.title %></h1>
 
-<p><%= @task.details %></p>
+<div class="card mt-3 mb-3">
+  <p  class="card-body"><%= @task.details %></p>
+</div>
 
 <p><input type="checkbox" <%=@task.completed ? "checked" : ""%>> complete</p>
 
-<%= link_to " Edit this task", edit_path %>
 
-<%= link_to " <- Back to list", tasks_path %>
+<p class="btn btn-outline-primary text-reset"><%= link_to "Edit this task", edit_path %></p>
+<p><%= link_to " <- Back to list", tasks_path %></p>
+</div>
